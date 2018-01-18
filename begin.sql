@@ -1,21 +1,21 @@
-create  database test; 
+CREATE  database test; 
 
 use test;
 go
-create table R(
+CREATE TABLE R(
 A varchar(100) null,
 B varchar(100) null,
 C varchar(100) null);
 
-create table S(
+CREATE TABLE S(
 D varchar(100) null,
 C varchar(100) null,
 E varchar(100) null);
 
-select * from R;
-select * from S;
+SELECT * FROM R;
+SELECT * FROM S;
 
-select * from R, S where R.C = S.C;
-/*select * from R inner join S on R.C = S.C;/*select * from R natural join S;*/*/
-select * from R left join S on R.C=S.C;
-select * from R right join S on R.C=S.C;
+SELECT * FROM R, S WHERE R.C = S.C;
+/*SELECT * FROM R inner join S ON R.C = S.C;/*SELECT * FROM R natural join S;*/*/
+SELECT * FROM R left join S ON R.C=S.C;
+SELECT * FROM R right join S ON R.C=S.C;
